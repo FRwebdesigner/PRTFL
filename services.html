@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Tu Nombre</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Francisco</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Sobre Mí</a></li>
+      <li><a href="projects.html">Proyectos</a></li>
+      <li><a href="skills.html">Habilidades</a></li>
+      <li><a href="services.html" class="active">Servicios</a></li>
+      <li><a href="testimonials.html">Testimonios</a></li>
+      <li><a href="certifications.html">Certificaciones</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="experience.html">Experiencia</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="hamburger">☰</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="services-hero">
+    <div class="services-hero-content">
+      <h1>Mis <span class="highlight">Servicios</span></h1>
+      <p>Soluciones digitales de alta calidad para hacer crecer tu negocio</p>
+    </div>
+  </section>
+
+  <!-- Servicios Grid -->
+  <section class="services-section">
+    <div class="services-container">
+      <div class="services-grid" id="servicesGrid">
+        <!-- Se llenan con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="service-modal" id="serviceModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
