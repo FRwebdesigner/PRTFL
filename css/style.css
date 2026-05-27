@@ -26,7 +26,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif !important;
 }
 
-/* ==================== NAVBAR - CON MÁS ESPACIO ENTRE LOGO E INICIO ==================== */
+/* ==================== NAVBAR - CENTRADO Y MÁS JUNTO ==================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -35,27 +35,16 @@ body {
   backdrop-filter: blur(16px);
   padding: 1.25rem 6%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;        /* Centrado */
   align-items: center;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   height: 80px;
 }
 
-.logo {
-  font-size: 1.85rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #6366f1, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -1.5px;
-  white-space: nowrap;
-  margin-right: 30px;           /* ← Aumentamos el espacio aquí */
-}
-
 .nav-links {
   display: flex;
-  gap: 2.7rem;
+  gap: 2.1rem;                    /* Reduje el espacio entre enlaces */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -65,9 +54,9 @@ body {
 .nav-links a {
   color: #cbd5e1;
   text-decoration: none;
-  font-size: 1.06rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  padding: 8px 4px;
+  padding: 8px 10px;
   position: relative;
   white-space: nowrap;
   transition: all 0.3s ease;
@@ -77,19 +66,20 @@ body {
   color: white;
 }
 
+/* Línea inferior al hover */
 .nav-links a::after {
   content: '';
   position: absolute;
   width: 0;
   height: 3px;
   bottom: -7px;
-  left: 4px;
+  left: 10px;
   background: linear-gradient(90deg, #6366f1, #a855f7);
   transition: width 0.4s ease;
 }
 
 .nav-links a:hover::after {
-  width: calc(100% - 8px);
+  width: calc(100% - 20px);
 }
 
 /* Hamburger */
@@ -1363,4 +1353,116 @@ body {
 .timeline-content ul li {
   margin: 8px 0;
   color: #cbd5e1;
+}
+
+/* ==================== PROCESS PAGE ==================== */
+
+.process-hero {
+  height: 60vh;
+  background: linear-gradient(135deg, #0f172a, #1e2937);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.process-hero-content h1 {
+  font-size: 4.4rem;
+}
+
+.process-section {
+  padding: 100px 6%;
+  background: var(--dark);
+}
+
+.process-steps {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.process-step {
+  background: rgba(30, 41, 55, 0.8);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all 0.4s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  border-color: #6366f1;
+}
+
+.process-step .step-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.process-step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ==================== FAQ PAGE ==================== */
+
+.faq-hero {
+  height: 55vh;
+  background: linear-gradient(135deg, #0f172a, #1e2937);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.faq-hero-content h1 {
+  font-size: 4.4rem;
+}
+
+.faq-section {
+  padding: 100px 6% 120px;
+  background: var(--dark);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: rgba(30, 41, 55, 0.8);
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #6366f1;
+}
+
+.faq-question {
+  padding: 1.4rem 1.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.faq-answer {
+  padding: 0 1.8rem 1.8rem;
+  color: #94a3b8;
+  display: none;
+  line-height: 1.7;
 }
